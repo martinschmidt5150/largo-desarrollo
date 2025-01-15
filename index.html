@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largo de Desarrollo</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Añade esta línea -->
+</head>
+<body>
+    <div class="container">
+        <h1>Cálculo del largo de desarrollo</h1>
+		<div class="row">
+            <label for="tipo">Tipo de barra</label>
+			<select id="tipo">
+                <option value="corrugado">Barra corrugada, recta</option>
+                <option value="hook">Barra corrugada, con gancho</option>
+                <option value="head">Barra corrugada, con cabeza</option>
+                <option value="elscorr">Barra corrugada electrosoldada, recta</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="diam">Diámetro de barra [mm]</label>
+            <select id="diam">
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="22">22</option>
+                <option value="25">25</option>
+                <option value="36">36</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="fy">Calidad del acero</label>
+            <select id="fy">
+                <option value="420">A63-420H</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="fc">Grado del hormigón</label>
+            <select id="fc">
+                <option value="20">G20</option>
+				<option value="25">G25</option>
+				<option value="30">G30</option>
+				<option value="35">G35</option>
+				<option value="40">G40</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="spac">Espaciamiento [mm]</label>
+            <input type="number" id="spac" placeholder="Ingresar Valor" value="200">
+        </div>
+        <div class="row">
+            <label for="rec">Recubrimiento [mm]</label>
+            <input type="number" id="rec" placeholder="Ingresar Valor" value="50">
+        </div>
+        <div class="row">
+            <label for="lda">&lambda; [--]</label>
+            <select id="lda">
+				<option value="1.0">Concreto de peso normal, 1.0</option>
+                <option value="0.75">Concreto de peso liviano, 0.75</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="psi_e">&Psi;e [--] (epóxico)</label>
+            <select id="psi_e">
+				<option value="1.5">Con recubrimiento epóxico, 1.5</option>
+				<option value="1.2">Con recubrimiento epóxico, 1.2</option>
+                <option value="1.0">Sin recubrimiento epóxico, 1.0</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="psi_s">&Psi;s [--] (tamaño)</label>
+            <select id="psi_s">
+				<option value="1.0">Barras No.22 o mayores, 1.0</option>
+                <option value="0.8">Barras No.18 o menores y alambres corrugados, 0.8</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="psi_t">&Psi;t [--] (ubicación)</label>
+            <select id="psi_t">
+				<option value="1.3">Más de 300 mm de concreto fresco colocado bajo el refuerzo horizontal, 1.3</option>
+                <option value="1.0">Otro, 1.0</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="psi_c">&Psi;c [--] (recubrimiento)</label>
+            <select id="psi_c">
+				<option value="0.7">0.7</option>
+                <option value="1.0">1.0</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="psi_r">&Psi;r [--] (confinamiento del refuerzo)</label>
+            <select id="psi_r">
+				<option value="0.8">0.8</option>
+                <option value="1.0">1.0</option>
+            </select>
+        </div>
+        <div class="row">
+            <button onclick="enviarDatos()">Calcular</button>
+        </div>
+        <p id="l_d"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
