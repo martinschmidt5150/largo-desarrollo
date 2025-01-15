@@ -13,7 +13,6 @@ function enviarDatos() {
         rec: parseFloat(document.getElementById('rec').value),
 		lda: parseFloat(document.getElementById('lda').value),
 		psi_e: parseFloat(document.getElementById('psi_e').value),
-		psi_s: parseFloat(document.getElementById('psi_s').value),
 		psi_t: parseFloat(document.getElementById('psi_t').value),
 		psi_c: parseFloat(document.getElementById('psi_c').value),
 		psi_r: parseFloat(document.getElementById('psi_r').value)
