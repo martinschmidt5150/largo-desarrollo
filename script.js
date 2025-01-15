@@ -1,4 +1,9 @@
 function enviarDatos() {
+	document.addEventListener('keydown', function(event) {
+		if (event.key === 'Enter') {
+			document.getElementById('myButton').click();
+		}
+	});
     const data = {
         tipo: document.getElementById('tipo').value,
         diam: parseFloat(document.getElementById('diam').value),
