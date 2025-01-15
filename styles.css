@@ -6,7 +6,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
 	height: page;
     margin: 0 auto;
     background-color: #ffffff; /* Fondo blanco para el contenedor */
@@ -50,7 +50,7 @@ input[type="number"] {
 }
 
 button {
-    width: 40%;
+    width: 100%;
     padding: 10px;
     background-color: #4CAF50;
     color: white;
