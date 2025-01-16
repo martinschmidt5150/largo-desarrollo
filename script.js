@@ -4,18 +4,26 @@ function enviarDatos() {
 			document.getElementById('myButton').click();
 		}
 	});
+    const spacValue = parseFloat(document.getElementById('spac').value);
+    const recValue = parseFloat(document.getElementById('rec').value);
+
+    if (spacValue <= 0 || recValue <= 0) {
+        alert('Los valores de espaciamiento y recubrimiento deben ser mayores a 0.');
+        return;
+    }
+
     const data = {
         tipo: document.getElementById('tipo').value,
         diam: parseFloat(document.getElementById('diam').value),
         fy: parseFloat(document.getElementById('fy').value),
         fc: parseFloat(document.getElementById('fc').value),
-        spac: parseFloat(document.getElementById('spac').value),
-        rec: parseFloat(document.getElementById('rec').value),
-		lda: parseFloat(document.getElementById('lda').value),
-		psi_e: parseFloat(document.getElementById('psi_e').value),
-		psi_t: parseFloat(document.getElementById('psi_t').value),
-		psi_c: parseFloat(document.getElementById('psi_c').value),
-		psi_r: parseFloat(document.getElementById('psi_r').value)
+        spac: spacValue,
+        rec: recValue,
+        lda: parseFloat(document.getElementById('lda').value),
+        psi_e: parseFloat(document.getElementById('psi_e').value),
+        psi_t: parseFloat(document.getElementById('psi_t').value),
+        psi_c: parseFloat(document.getElementById('psi_c').value),
+        psi_r: parseFloat(document.getElementById('psi_r').value)
     };
     
     const json1 = JSON.stringify(data);
